@@ -1,0 +1,22 @@
+[
+    {
+        "reviews": [], 
+        "ratings": {}, 
+        "price": "", 
+        "url": "http://www.amazon.com/dp/B01ETPUQ6E", 
+        "name": ""
+    }, 
+    {
+        "reviews": [], 
+        "ratings": {
+            "2 star": "15%", 
+            "1 star": "20%", 
+            "4 star": "19%", 
+            "3 star": "9%", 
+            "5 star": "37%"
+        }, 
+        "price": "", 
+        "url": "http://www.amazon.com/dp/B017HW9DEW", 
+        "name": "Motorola Moto G (3rd Generation) No Contract Phone (Virgin Mobile) - Retail Packaging"
+    }
+]
