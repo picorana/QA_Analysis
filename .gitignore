@@ -4,6 +4,14 @@ questions/
 results/
 Cell_Phones_and_Accessories_5.json
 Electronics_5.json
+qa_Pet_Supplies.json
+asins_to_examine.txt
+asins_with_problems.txt
+failed_questions_urls.txt
+failed_urls.txt
+wordtovecmodel.txt
+data.json
+output.json
 
 # Personal data
 keys.txt
