@@ -5,6 +5,7 @@ results/
 Cell_Phones_and_Accessories_5.json
 Electronics_5.json
 qa_Pet_Supplies.json
+qa_Cell_Phones_and_Accessories.json
 asins_to_examine.txt
 asins_with_problems.txt
 failed_questions_urls.txt
