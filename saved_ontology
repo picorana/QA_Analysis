@@ -1,0 +1,846 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xml:base="http://test.org/onto.owl"
+         xmlns="http://test.org/onto.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+<owl:Ontology rdf:about="http://test.org/onto.owl"/>
+
+<owl:Class rdf:about="#Microphones">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Microphones_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Electronics">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Wearable_Technology">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Electronics"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Smart_Watches">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Wearable_Technology"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cell_Phones_and_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cell_Phones">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Cell_Phones_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlocked_Cell_Phones">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Cell_Phones_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Replacement_Parts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Carrier_Cell_Phones">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Toys_and_Games">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports_and_Outdoor_Play">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Toys_and_Games"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pools_and_Water_Fun">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Sports_and_Outdoor_Play"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_and_Kitchen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bath">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Home_and_Kitchen"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bathroom_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Bath"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bluetooth_Headsets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Computers_and_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Electronics"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlocked_Smartphones_DOOGEE_X10_GSM_International_Phone__50_IPS_Display__Android_60__8GB_ROM__2MP+5MP_Dual_Camera__3360mAh_Battery__Dual_Sim_Unlocked_Cell_Phones__Gold(no_ads)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S4_SGHI337_Unlocked_GSM_Smartphone_with_13_MP_Camera_Touchscreen_and_16_GB_Storage_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_Studio_X8_HD__50_GSM_Unlocked_Smartphone_White">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bonafide_HardwareTM__Smart_Phone_Repair_Tool_Kit_17_Piece_Set_Screw_Driver_Torx_Pentalobe_Cell_Tools">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Replacement_Parts"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_S7_Unlocked_GSM_Smartphone_Gold_32GB">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlocked_Cell_Phones_DOOGEE_X5_Dual_Sim_Smartphones__50_HD_IPS_Display__Android_60__MT6580_Quad_Core__1GB_RAM+8GB_ROM__5MP_Camera__GSM_Unlocked_Phone_International__Black(no_ads)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GreatCall_Jitterbug_Smart_EasytoUse_55”_Smartphone_for_Seniors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Carrier_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Squirt_Smartphone_by_HSC">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Pools_and_Water_Fun"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Apple_iPhone_7_Factory_Unlocked_GSM_Smartphone__32GB_Rose_Gold_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#The_NoPhone_Original">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_One_A0001_4G_LTE_3GBRAM_64GBROM_55_Inch_International_Version__No_Warranty__Sandstone_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ASUS_ZenFone_3_MAX_ZC520TL_Smartphone_52inch_16GB_(Glacier_Silver)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Apple_iPhone_6_16GB_Unlocked_GSM_Smartphone__Space_Gray_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Microsoft_Lumia_435_8GB_4G_Unlocked_GSM_Windows_Smartphone__(White)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S6_SMG920A_32GB_Sapphire_Black_Smartphone_for_AT&amp;T_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Carrier_Cell_Phones"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sapphire black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_Note_4_N910A_32GB_Unlocked_GSM_4G_LTE_Smartphone_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_Advance_A5_Unlocked_Dual_Sim_Smartphone_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J5_Pro_J530G_(2017)_16GB_52_Unlocked_GSM_4G_LTE_OctaCore_Smartphone_w/_Dual_13MP_Cameras_Android_Nougat_and_Fingerprint_Sensor__Gold">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Orginal_Oneplus_X_4G_Smartphone_Android_51_Quad_Core_23GHz_3GB_RAM+16GB_ROM_with_50_inch_Screen_Dual_Sim_Card_International_Version_(White_with_Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_Note_5_SMN920A_32GB_GSM_Unlocked_Cellphone_Black_Sapphire">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Ltieltie™Luxury_Bling_Crystal_3D_Butterfly_Diamond_PU_Leather_Wallet_Card_Holder_Flip_Case_Cover_For_smart_phones_Samsung_Galaxy_J3_(2016)_J320?">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Bathroom_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#POSIUAN_MSRM_Smart_Watch_Bluetooth_Touch_Screen_Flexible_Band_Unlocked_Watch_Cell_Phone_for_Android_Smartphones_and_iPhone_(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Wireless_Bluetooth_Sport_Headphones_Bluetooth_40_Bone_Conduction_Headphone_Bluetooth_Headset_Stereo_Builtin_Microphone_Earphones_For_Smartphone_Tablet(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Bluetooth_Headsets"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S5_G900v_16GB_Verizon_Wireless_CDMA_Smartphone__Shimmery_White_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlocked_Smartphones_DOOGEE_X5_Dual_Sim_GSM_International_Phone__50_HD_IPS_Display__Android_60__MT6580_Quad_Core__1GB_RAM+8GB_ROM__5MP_Camera_Unlocked_Cell_Phones_White_(no_ads)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Padgene_DZ09_Bluetooth_Smart_Watch_with_Camera_for_Samsung_S5_/_Note_2_/_3_/_4_Nexus_6_Htc_Sony_and_Other_Android_Smartphones_(Rose_Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rose gold</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Computers_and_Tablets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Computers_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Computer_Accessories_and_Peripherals">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Computers_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Décor">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Home_and_Kitchen"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Fragrance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Home_Décor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tools_and_Home_Improvement">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Electrical">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Tools_and_Home_Improvement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Outlets_and_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Electrical"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Light_Bulbs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Tools_and_Home_Improvement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LED_Bulbs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Light_Bulbs"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports_and_Outdoors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fan_Shop">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Sports_and_Outdoors"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cell_Phone_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Fan_Shop"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Musical_Instruments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Microphones_and_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Musical_Instruments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports_and_Fitness">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Sports_and_Outdoors"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Exercise_and_Fitness">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Sports_and_Fitness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tablet_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Computers_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Chargers_and_Power_Adapters">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Automation_Devices">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Electrical"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Office_Products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Office_Electronics">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Office_Products"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Electronic_Organizers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Office_Electronics"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sazooy_DZ09_Bluetooth_Smart_Watch_Touch_Screen_Smart_Wrist_Watch_Phone_Support_SIM_TF_Card_With_Camera_Pedometer_Activity_Tracker_for_Iphone_IOS_Samsung_Android_Smartphones_(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="#has_color">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S6_Unlocked_SMG920A_GSM_Smartphone_White_Pearl_32GB">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_Book_12”_Windows_2in1_PC_(WiFi)_Silver_8GB_RAM/256GB_SSD_SMW720NZKAXAR">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Computers_and_Tablets"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#LeEco_|_Le_S3_Unlocked_DualSIM_Smartphone;_55_Display_16MP_Camera_4K_Video_32GB_Storage_3GB_RAM__Gray_(US_Warranty)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S6_SMG920V_32GB_White_Smartphone_for_Verizon_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Huawei_P8_Lite_ALEL21_16GB_Black_Dual_Sim_5Inch_Unlocked_Smartphone__International_Stock_No_Warranty">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_J3__Verizon_Prepaid">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Carrier_Cell_Phones"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">white</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S3_SGHi747_4G_LTE_GSM_Unlocked_16GB_No_Warranty_(White)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_Mega_63_I527_16GB_Unlocked_GSM_4G_LTE_Smartphone_w/_8MP_Camera__Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SAMSUNG_GALAXY_S4_MINI_GTi9195_8GB_LTE_UNLOCKED_International_Version_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MultiDevice_Bluetooth_KeyboardCOO_Wireless_Keyboards_with_Builtin_Stand_for_iOS_Android_Windows_Tablets_and_Smartphone(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Computer_Accessories_and_Peripherals"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#EasySMX_DZ09_Bluetooth_Smart_Watch_Phone_Smartwatch_Wristwatch_with_20MP_Camera_for_Samsung_HTC_Huawei_Xiaomi_Android_Smartphones_(Silver)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlocked_Cell_Phones_DOOGEE_X10_Dual_Sim_Smartphones_With_50_IPS_Display__Android_60__8GB_ROM__2MP+5MP_Dual_Camera__3360mAh_Battery__GSM_Unlocked_Phone_International__Black(no_ads)_…">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S7_G930a_32GB_AT&amp;T_GSM_4G_LTE_Smartphone__Black_Onyx">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J7_Prime_(32GB)_G610F/DS__55_Dual_SIM_Unlocked_Phone_with_Finger_Print_Sensor_(White_Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Saramonic_SmartMic_Mini_Flexible_Condenser_Microphone_with_High_Sensitivity_for_Apple_IOS_Devices_and_Android_Smartphones">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Microphones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fitness_Tracker_Coffea_C2_Activity_Wristband_:_Bluetooth_Wireless_Smart_Bracelet_Waterproof_Pedometer_Activity_Tracker_Watch_with_Replacement_Band_for_IOS_&amp;_Android_Smartphone">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Exercise_and_Fitness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_Studio_X8_HD__50_GSM_Unlocked_Smartphone_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Maeffort_Smart_Watch_Outdoor_Sport_Watch_Bluetooth_Waterproof_IP68_for_HTC_Sony_Samsung_LG_Google_Pixel_Android_Phones_and_iPhone_5_5S_6_6_Plus_7_Smartphones_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_VIVO_XL2__55_4G_LTE_GSM_Unlocked_Smartphone___32GB+3GB_RAM_Gold">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_SMG900V__Galaxy_S5__16GB_Android_Smartphone_Verizon___Black_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_Grand_Prime_Dual_Sim_Factory_Unlocked_Phone__Retail_Packaging__Gold(International_Version)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Universal_2in1_Touch_Screen_Stylus_Ballpoint_Pen_[3_pcs_Black_+_3_pcs_Silver]_For_Tablet_smartphone_iPad_iPhone_iPod_Samsung_LG_HTC_Sony_PC">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Tablet_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_3_RAM_6GB+ROM_64GB_4G_FDDLTE_55_inch_Android_60_Smart_Phone_Qualcomm_Snapdragon_820_Quad_Core_2x22GHz_+_2x16GHz_80MP+160MP_(Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_Rugby_Pro_4G_LTE_I547_Unlocked_Android_Ruggedized_Smart_Phone">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J7_J710M_Factory_Unlocked_Smartphone_16GB_55_Inch_13MP_No_Warranty__International_Version_Gold">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_USB_Data_Cable_for_Galaxy_S3/S4/Note_2_&amp;_Other_Smartphones_4_Pack__NonRetail_Packaging__White">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Computer_Accessories_and_Peripherals"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S7_Active_G891A_32GB_Unlocked_GSM_ShatterDust_and_Water_Resistant_Smartphone_w/_12MP_Camera__Titanium_Gray">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Apple_iPhone_6_64GB_Unlocked_Smartphone__Gold_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Car_Charger_for_Samsung_Devices__Retail_Packaging__Black_Sapphire">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Chargers_and_Power_Adapters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Antimi_SmartWatch_Sweatproof_Smart_Watch_Phone_for_Android_HTC_Sony_Samsung_LG_Google_Pixel_/Pixel_and_iPhone_5_5S_6_6_Plus_7_Smartphones_Silver">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Bluetooth_Smart_Watch_Aosmart_U8_Smartwatch_for_Android_Smartphones__Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Original_OnePlus_One_White_Black_55_3GB_RAM_64GB_1080P_Android_44_NFC_(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_J1_2016_/_Express_3_J120A_Unlocked_GSM_QuadCore_Android_Smartphone__White_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#U_Watch_Smart_Watch_Bluetooth_Watch_for_Android_smartphones_and_iPhone(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Nextbit_Robin_Factory_Unlocked_GSM_Smartphone__Midnight">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Huawei_Honor_6X_Dual_Camera_Unlocked_Smartphone_32GB_Gray_(US_Warranty)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S6_32GB_G920A_Unlocked_GSM__Gold_Platinum">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Galaxy_S5_G900A_Factory_Unlocked_Android_Smartphone_16GB_White">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Alcatel_Ideal_4G_LTE_Unlocked_4060A_Android_5mp_8GB_Quad_Core_Desbloqueado">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_R1_HD__16_GB__Black__Prime_Exclusive__with_Lockscreen_Offers_&amp;_Ads">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J3_(2016)_Duos_SMJ320H/DS_8GB_Dual_SIM_Unlocked_GSM_Smartphone__International_Version_No_Warranty_(Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Oneplus_One_Plus_One_FDD_LTE_4g_Mobile_Phone_55_1080p_Snapdragon_801_3gb_RAM_64gb_ROM_Android_44_NFC_Cyanogenmod_Cm11s_(Standard)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Comkes_Essential_Oil_Diffuser_280ml_Smart_Air_Humidifier_Works_with_Alexa_App_Control_by_Smartphone_7_Color_LED_Lights_Changing_Ultrasonic_Mist_Humidifier_for_Home_Office_Baby">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Home_Fragrance"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J7_J710M_Factory_Unlocked_Smartphone_16GB_55_Inch_13MP_No_Warranty__International_Version_(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TracFone_LG_Rebel_4G_LTE_Prepaid_Smartphone">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Carrier_Cell_Phones"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Apple_iPhone_6_Unlocked_Smartphone_16_GB_(Gold)_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_Advance_50__Unlocked_Dual_Sim_Smartphone__US_GSM__White">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Apple_iPhone_6_16GB_Factory_Unlocked_GSM_4G_LTE_Internal_Smartphone__Space_Gray">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_5_A5000_55_inch_Snapdragon_835_Dual_16MP_(8GB+128GB)_4G_LTE_Dual_Sim_Smartphone_(Slate_Grey)__International_Version_No_Warranty_GSM_ONLY_NO_CDMA">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_GALAXY_S6_G920_32GB_Unlocked_GSM_4G_LTE_OctaCore_Smartphone__Black_Sapphire">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_2_Unlocked_Smartphone_64GB_Sandstone_Black_(US_Warranty_–_Model_A2005)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J2_Prime_G532M__Single_Sim__4G_LTE_Factory_Unlocked_Smartphone_(Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S6_SMG920V_32GB_Sapphire_Black_Smartphone_for_Verizon_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Wifi_Smart_Plug_Set_of_2_Mini_Smart_Outlet_Works_with_Amazon_Alexa_Remote_Control_By_Smart_Phone_from_Anywhere_Anytime_(2_Packs)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Outlets_and_Accessories"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 packs</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J3_(2016)_Duos_SMJ320H/DS_8GB_Dual_SIM_Unlocked_GSM_Smartphone__International_Version_No_Warranty_(Black)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Antimi_SmartWatch_Sweatproof_Smart_Watch_Phone_for_Android_HTC_Sony_Samsung_LG_Google_Pixel_/Pixel_and_iPhone_5_5S_6_6_Plus_7_Smartphones_Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Smart_Watches"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black &amp; black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J3_(2016)_Duos_SMJ320H/DS_8GB_Dual_SIM_Unlocked_GSM_Smartphone__International_Version_No_Warranty_(White)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S7_SMG930A_Unlocked_Smartphone_(Black_Onyx)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Spigen_Kuel_OneTap_AP230T_CD_Slot_Car_Phone_Mount_Universal_Car_Phone_Holder_for_iPhone_7_/_7_Plus_/_6S_/_6S_Plus_/_Galaxy_S8_/_S8_Plus_/_S7_/_S7_Edge_/_LG_/_Nexus_And_More">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Car_Accessories"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#LOHAS_Smart_LED_Bulb_WiFi_Light_Multicolored_LED_Bulbs_A19_LED_Dimmable_60W_Equivalent(9W)_Smartphone_Controlled_Daylight_&amp;_Night_Light_Home_Lighting_Works_with_Amazon_Alexa(1_Pack)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#LED_Bulbs"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_T959_Galaxy_S_Vibrant_4G_GSM_Unlocked_Android_Smartphone__Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Cell_Phone_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_J1_Mini_(2016)_Duos_SMJ105H/DS_8GB_Dual_SIM_Unlocked_GSM_Smartphone__International_Version_No_Warranty_(Gold)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_3T_A3003_Unlocked_Smartphone_55Inch_128GB_DualSIM_4G_LTE__International_Version_(Gunmetal)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Moto_G_Plus_(5th_Generation)__Lunar_Gray__32_GB__Unlocked__Prime_Exclusive__with_Lockscreen_Offers_&amp;_Ads">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_One_White_55_inch_4G_FDDLTE_SmartPhone_Android_44_IPS_Capacitive_Screen_Phablet_Qualcomm_Snapdragon_801(8974AC)_Krait_400_Quad_Core_25GHz_RAM_3GB_WCDMA_GSM_5Mp+130MP_Camera1920_x_1080_Pixel_Unlock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_SmartThings_Smart_Home_Hub">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Home_Automation_Devices"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">white</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Apple_iPhone_6_Plus_16GB_GSM_Unlocked_Smartphone__Silver_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_CORE_PRIME_Straight_Talk_SmartPhone_Uses_Verizon_Towers_LTE_S820">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Carrier_Cell_Phones"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_color"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S6_SMG920a_Unlocked_Smartphone_32GB_15GHz_OctaCore_(Black_Sapphire)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_3T_6GB+64GB_NA_A3000_55_Factory_Unlocked_Phone__64_GB__Gunmetal_(US_Warranty)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RCA_G1_55_HD_Unlocked_Dual_Sim_Smartphone__Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BLU_Advance_50__Unlocked_Dual_Sim_Smartphone__US_GSM__Black">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Huawei_Honor_6X_Dual_Camera_Unlocked_Smartphone_32GB_Silver_(US_Warranty)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_3_RAM_6GB+ROM_64GB_4G_FDDLTE_55_inch_Android_60_Smart_Phone_Qualcomm_Snapdragon_820_Quad_Core_2x22GHz_+_2x16GHz_80MP+160MP_(Grey)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CUBOT_HAFURY_UMAX_(2017)_6”_3G_GSM_WCDMA_Unlocked_Dual_Sim_Smartphone_with_4500_mAh_Battery_Android_7_16GB_Storage+2GB_RAM_13MP+5MP_Dual_Camera_Notification_Light_WFI_GPS_Black_[CUBOT_OFFICIAL]">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OnePlus_5_A5000_55_inch_Snapdragon_835_Dual_16MP_(6GB+64GB)_4G_LTE_Dual_Sim_Smartphone_(Slate_Grey)__International_Version_No_Warranty_GSM_ONLY_NO_CDMA">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Samsung_Galaxy_S7_G930v_32GB_Verizon_Wireless_CDMA_4G_LTE_Smartphone_w/_12MP_Camera__Black_Onyx_(Certified_Refurbished)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Unlocked_Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BUBM_Portable_Waterproof_Travel_Cable_Organizer_Storage_Bag_Electronics_Accessories_Travel_Organizer_for_Laptop_Accessories_Hard_Drive_Pen_Smartphone_PassportSky_blue">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="#Electronic_Organizers"/>
+</owl:Class>
+
+
+</rdf:RDF>

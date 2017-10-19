@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns="http://test.org/onto.owl#"
+         xml:base="http://test.org/onto.owl"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<owl:Ontology rdf:about="http://test.org/onto.owl"/>
+
+<owl:Class rdf:about="#Electronics">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Wearable_Technology">
+  <rdfs:subClassOf rdf:resource="#Electronics"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Smart_Watches">
+  <rdfs:subClassOf rdf:resource="#Wearable_Technology"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cell_Phones_and_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cell_Phones">
+  <rdfs:subClassOf rdf:resource="#Cell_Phones_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unlocked_Cell_Phones">
+  <rdfs:subClassOf rdf:resource="#Cell_Phones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Replacement_Parts">
+  <rdfs:subClassOf rdf:resource="#Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Carrier_Cell_Phones">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Toys_and_Games">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports_and_Outdoor_Play">
+  <rdfs:subClassOf rdf:resource="#Toys_and_Games"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pools_and_Water_Fun">
+  <rdfs:subClassOf rdf:resource="#Sports_and_Outdoor_Play"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_and_Kitchen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bath">
+  <rdfs:subClassOf rdf:resource="#Home_and_Kitchen"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bathroom_Accessories">
+  <rdfs:subClassOf rdf:resource="#Bath"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bluetooth_Headsets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Computers_and_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Computers_and_Tablets">
+  <rdfs:subClassOf rdf:resource="#Computers_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fitness_Trackers">
+  <rdfs:subClassOf rdf:resource="#Fitness_Technology"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tablet_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Styluses">
+  <rdfs:subClassOf rdf:resource="#Tablet_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cables_and_Interconnects">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#USB_Cables">
+  <rdfs:subClassOf rdf:resource="#Cables_and_Interconnects"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Chargers_and_Power_Adapters">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car_Chargers">
+  <rdfs:subClassOf rdf:resource="#Chargers_and_Power_Adapters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Automation_Devices">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Hubs_and_Controllers">
+  <rdfs:subClassOf rdf:resource="#Home_Automation_Devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Office_Products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Office_Electronics">
+  <rdfs:subClassOf rdf:resource="#Office_Products"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Electronic_Organizers">
+  <rdfs:subClassOf rdf:resource="#Office_Electronics"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tablets">
+  <rdfs:subClassOf rdf:resource="#Computers_and_Tablets"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Computer_Accessories_and_Peripherals">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Keyboards_Mice_and_Accessories">
+  <rdfs:subClassOf rdf:resource="#Computer_Accessories_and_Peripherals"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Keyboards">
+  <rdfs:subClassOf rdf:resource="#Keyboards_Mice_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Décor">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Fragrance">
+  <rdfs:subClassOf rdf:resource="#Home_Décor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Home_Fragrance_Accessories">
+  <rdfs:subClassOf rdf:resource="#Home_Fragrance"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tools_and_Home_Improvement">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Electrical">
+  <rdfs:subClassOf rdf:resource="#Tools_and_Home_Improvement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Outlets_and_Accessories">
+  <rdfs:subClassOf rdf:resource="#Electrical"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Outlet_Switches">
+  <rdfs:subClassOf rdf:resource="#Outlets_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car_Accessories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car_Cradles_and_Mounts">
+  <rdfs:subClassOf rdf:resource="#Car_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Light_Bulbs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LED_Bulbs">
+  <rdfs:subClassOf rdf:resource="#Light_Bulbs"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports_and_Outdoors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fan_Shop">
+  <rdfs:subClassOf rdf:resource="#Sports_and_Outdoors"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cell_Phone_Accessories">
+  <rdfs:subClassOf rdf:resource="#Fan_Shop"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Musical_Instruments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Microphones_and_Accessories">
+  <rdfs:subClassOf rdf:resource="#Musical_Instruments"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Microphones">
+  <rdfs:subClassOf rdf:resource="#Microphones_and_Accessories"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Condenser_Microphones">
+  <rdfs:subClassOf rdf:resource="#Microphones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vocal">
+  <rdfs:subClassOf rdf:resource="#Condenser_Microphones"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports_and_Fitness">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Exercise_and_Fitness">
+  <rdfs:subClassOf rdf:resource="#Sports_and_Fitness"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fitness_Technology">
+  <rdfs:subClassOf rdf:resource="#Exercise_and_Fitness"/>
+</owl:Class>
+
+
+</rdf:RDF>

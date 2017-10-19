@@ -12,6 +12,7 @@ failed_questions_urls.txt
 failed_urls.txt
 wordtovecmodel.txt
 data.json
+tmp.json
 output.json
 
 # Personal data
