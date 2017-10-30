@@ -25,16 +25,17 @@ class AmazonScraper(object):
 		default_attr = dict(
 			asin = '',
 			asins = [],
-			verbose=2
+			verbose=False,
+			save_main_pages=True
 			)
-
-		self.logger = AmazonScraper.get_logger(level=logging.INFO, verbose=default_attr.get('verbose'))
 
 		allowed_attr = list(default_attr.keys())
 		default_attr.update(kwargs)
 
 		for key in default_attr:
 			if key in allowed_attr: self.__dict__[key] = kwargs.get(key)
+
+		self.logger = AmazonScraper.get_logger(level=logging.DEBUG, verbose=default_attr.get('verbose'))
 
 		# initialize a user agent generator
 		self.ua = UserAgent()
@@ -60,36 +61,43 @@ class AmazonScraper(object):
 
 		while attempt < 10: 
 
+			# craft a request
 			res = requests.get(base_product_page_url + asin, 
 				proxies = { 'http' : random.sample( self.proxies, 1 )},
 				headers = { 'User-Agent' : self.ua.random}
 				)
 
+			# if the asin does not exist, exit.
 			if res.status_code == 404:
 				self.logger.error("Asin " + asin + " does not exist")
 				raise RuntimeError("Asin " + asin + " does not exist")
+			# if the connection fails, try again
 			elif res.status_code != 200:
 				self.logger.error("Connection error on asin " + asin)
+			# if everything goes well, scrape
 			else:
-
-				page_file = open("./pages/" + asin + '.html', 'w+')
-				page_file.write(res.content)
-
 				soup = BeautifulSoup(res.content, 'html.parser')
 
+				# eventually amazon discovers us. 
+				# in this case, try again with another proxy
 				if soup.title.text == "Robot Check":
 					self.logger.log("Robot Check received")
+				else:
 
-				return soup.find(
-					"div", { "id" : "reviews-medley-footer" }
-					).find(
-					"a", { "class" : "a-link-emphasis" }
-					).get("href")
+					# save the page if the user specified to
+					if save_main_pages:
+						if not os.path.exists('./pages'):
+							os.makedirs('./pages')
+						page_file = open("./pages/" + asin + '.html', 'w+')
+						page_file.write(res.content)
+					
+					return soup.find(
+						"div", { "id" : "reviews-medley-footer" }
+						).find(
+						"a", { "class" : "a-link-emphasis" }
+						).get("href")
 
-
-
-
-
+		raise RuntimeError("Fetching product " + asin + " failed after several attempts.")
 
 
 	def get_proxies(self):
@@ -97,6 +105,7 @@ class AmazonScraper(object):
 
 		proxies = set()
 
+		# eventually put this somewhere else
 		proxy_sources = [
 			'https://free-proxy-list.net/anonymous-proxy.html', 
 			'https://www.us-proxy.org/', 
@@ -104,6 +113,7 @@ class AmazonScraper(object):
             'https://www.socks-proxy.net/'
 		]
 
+		# count times this is executed. stop at 10 attempts.
 		attempt = 0
 		while not len(proxies) > 0:
 			for source in proxy_sources:
@@ -137,7 +147,7 @@ class AmazonScraper(object):
 
 
 	@staticmethod
-	def get_logger(level=logging.INFO, verbose=2):
+	def get_logger(level=logging.DEBUG, verbose=False):
 		"""Returns a logger"""
 
 		logger = logging.getLogger(__name__)
@@ -149,8 +159,10 @@ class AmazonScraper(object):
 
 		sh = logging.StreamHandler(sys.stdout)
 		sh.setFormatter( logging.Formatter('%(levelname)s: %(message)s') )
-		sh_lvls = [logging.ERROR, logging.WARNING, logging.INFO]
-		sh.setLevel(sh_lvls[verbose])
+		if verbose:
+			sh.setLevel(logging.DEBUG)
+		else:
+			sh.setLevel(logging.ERROR)
 		logger.addHandler(sh)
 
 		logger.setLevel(level)
@@ -158,8 +170,6 @@ class AmazonScraper(object):
 		return logger
 
 	
-
-
 
 def main():
 
@@ -171,6 +181,8 @@ def main():
 
 	parser.add_argument('asin', help='Amazon asin(s) to be scraped', nargs='*')
 	parser.add_argument('--filename', '-f', help='Specify path to list of asins')
+	parser.add_argument('--save-main-pages', '-p', action='store_true', default=True, help='Saves the main pages scraped')
+	parser.add_argument('--verbose', '-v', action='store_true', default=False, help='Logging verbosity level')
 
 	args = parser.parse_args()
 	
