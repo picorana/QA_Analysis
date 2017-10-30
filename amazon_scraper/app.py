@@ -1,10 +1,13 @@
 # TODO:
 # * import list of asins from file
-# * ability to change proxy sources 
+# * ability to change proxy sources
+# * manage ssl errors!! 
+# * manage timeouts
 
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from pprint import pprint
+from math import *
 import requests
 import random
 import logging
@@ -16,6 +19,7 @@ import re
 import os, sys
 
 base_product_page_url = 'https://www.amazon.com/gp/product/'
+base_amazon_url = 'https://www.amazon.com/'
 
 class AmazonScraper(object):
 	"""Hello, this is AmazonScraper!"""
@@ -51,8 +55,101 @@ class AmazonScraper(object):
 
 			self.proxies = self.get_proxies()
 
-			main_reviews_url = self.retrieve_page(asin)
+			main_reviews_url, review_pages_number = self.retrieve_page(asin)
 
+			reviews, failed_urls = self.retrieve_reviews(main_reviews_url, review_pages_number)
+			reviews_list = list(reviews.queue)
+			failed_urls_list = list(failed_urls.queue)
+
+			self.logger.info("found " + str(len(reviews_list)) + " reviews for product " + asin)
+			self.logger.info("failed " + str(len(failed_urls_list)) + " requests for product " + asin)
+
+
+
+	def retrieve_reviews(self, main_reviews_url, review_pages_number):
+		"""Collects the review given the url of the reviews page"""
+		
+		results = Queue.Queue()
+		fails = Queue.Queue()
+		threads = []		
+
+		# craft the single review page url
+		url_parts = (base_amazon_url + main_reviews_url[1:]).strip().split("/")
+
+		params = url_parts[-1].split('&')
+
+		for page_num in range(1, review_pages_number):
+
+			chosen_params = ['ref=cm_cr_dp_d_show_all_btm_'+str(page_num)+'?ie=UTF8', 'pageNumber='+str(page_num)]
+
+			final_url = "https:/"
+
+			for i, item in enumerate(url_parts):
+				if i < (len(url_parts)-1) and i>0: final_url += item + '/'
+
+			for param in chosen_params:
+				final_url += param + '&'
+
+			final_url = final_url[:-1]
+			
+			t = threading.Thread(
+				target=self.scrape_page_reviews, 
+				args=(final_url, fails, results)
+				)
+
+			t.start()
+			threads.append(t)
+
+		for thread in threads:
+			thread.join()
+
+		return results, fails
+
+
+	def scrape_page_reviews(self, url, fails, results):
+		"""threads to request and scrape a single review page"""
+		
+		attempt = 0
+
+		while attempt < 10 :
+			try:
+				res = requests.get(url,
+					timeout = 20, 
+					proxies = { 'http' : random.sample( self.proxies, 1 )},
+					headers = { 'User-Agent' : self.ua.random}
+					)
+
+				if res.status_code != 200:
+					raise RuntimeError("Server not responding: status code " + str(res.status_code) + " for url " + url)
+				elif BeautifulSoup(res.content, 'html.parser').title.text == "Robot Check":
+					raise RuntimeError("Robot Check not passed for url " + url)
+				else:
+					soup = BeautifulSoup(res.content, 'html.parser')
+					review_boxes = soup.find_all("div", {"class":"review"})
+
+					for box in review_boxes:
+						review = {}
+						review['title'] = box.find("a", {"class":"review-title"}).text
+						review['text'] = box.find("span", {"class":"review-text"}).text
+						review['date'] = box.find("span", {"class":"review-date"}).text
+						review['rating'] = box.find("i", {"class":"review-rating"}).span.text
+						review['author'] = box.find("a", {"class":"author"}).text
+						review['author_id'] = box.find("a", {"class":"author"}).get('href').split('/')[4]
+						results.put(review)
+
+					self.logger.info("finished scraping " + url)
+					return
+
+			except requests.exceptions.Timeout:
+				self.logger.debug("Connection timed out for url " + url)
+			except requests.exceptions.RequestException as err:
+				self.logger.debug(err)
+			except RuntimeError as err:
+				self.logger.debug(err)
+			attempt += 1
+
+		self.logger.debug("failed url " + url + " after several attempts")
+		fails.put(url)
 
 	def retrieve_page(self, asin):
 		"""Requests the main product page, saves it, and returns an url for the reviews"""
@@ -85,17 +182,24 @@ class AmazonScraper(object):
 				else:
 
 					# save the page if the user specified to
-					if save_main_pages:
+					if self.save_main_pages:
 						if not os.path.exists('./pages'):
 							os.makedirs('./pages')
 						page_file = open("./pages/" + asin + '.html', 'w+')
 						page_file.write(res.content)
 					
-					return soup.find(
+					reviews_url = soup.find(
 						"div", { "id" : "reviews-medley-footer" }
 						).find(
 						"a", { "class" : "a-link-emphasis" }
 						).get("href")
+
+
+					review_pages_number = int(ceil(float(soup.find("div", {"id":"reviews-medley-footer"}).a.text
+						.split("See all ")[1]
+						.split(" customer")[0])/10))
+
+					return reviews_url, review_pages_number
 
 		raise RuntimeError("Fetching product " + asin + " failed after several attempts.")
 
